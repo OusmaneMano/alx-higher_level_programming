@@ -2,17 +2,12 @@
 # Prints the number of and the list of its arguments
 if __name__ == "__main__":
     import sys
-
-    arg = sys.argv
-    size = len(arg) - 1
-
-    if size > 1:
-        print("{} arguments:".format(size))
-        for i in range(1, size  + 1):
-            print("{}: {}".format(i, arg[i]))
-
-    elif size == 0:
-    print("{} argument:".format(size))
+    arg = len(sys.argv)
+    if arg == 1:
+        print("{} arguments:".format(arg - 1))
+    elif arg == 2:
+        print("{} argument:".format(arg - 1))
     else:
-    print("{} argument:".format(size))
-    print("{}: {}".format(size, arg[1]))
+        print("{} arguments:".format(arg - 1))
+    for i in range(1, arg):
+        print("{}: {}".format(i, sys.argv[i]))
