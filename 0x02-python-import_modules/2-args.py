@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-# Prints the number of and the list of its arguments
 if __name__ == "__main__":
     import sys
     arg = len(sys.argv)
     if arg == 1:
-        print("{} arguments:".format(arg - 1))
+        print("{} arguments.".format(arg - 1))
     elif arg == 2:
         print("{} argument:".format(arg - 1))
     else:
